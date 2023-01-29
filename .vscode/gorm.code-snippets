@@ -1,0 +1,34 @@
+{
+	"gorm-service": {
+		"scope": "go",
+		"prefix": "gorm",
+		"body": [
+			"type $1Service interface {",
+			"Create($3) (*$2, error)",
+			"FindAll() ([]$2, error)",
+			"FindByID(int64) (*$2, error)",
+			"Delete(int64) (*$2, error)",
+			"Update(*$2) (bool, error)",
+			"}\n\n",
+			"type $1ServiceImpl struct {",
+			"db *gorm.DB",
+			"}\n",
+			"func New$1Service(db *gorm.DB) $1Service {",
+			"return &$1ServiceImpl{db}\n",
+			"}\n",
+			"func (s *$1ServiceImpl) Create($3) (*$2, error) {",
+			"}\n",
+			"func (s *$1ServiceImpl) FindAll() ([]$2, error) {",
+			"",
+			"}\n",
+			"func (s *$1ServiceImpl) FindAllByUserID(int64) ([]$2, error) {",
+			"}\n",
+			"func (s *$1ServiceImpl) FindByID(int64) (*$2, error) {",
+			"}\n",
+			"func (s *$1ServiceImpl) Delete(int64) (*$2, error){",
+			"}\n",
+			"func (s *$1ServiceImpl) Update(*$2) (bool, error) {",			
+			"}",
+		]
+	}
+}
